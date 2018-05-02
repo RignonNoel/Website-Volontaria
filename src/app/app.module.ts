@@ -47,6 +47,10 @@ import { DefaultLayoutComponent } from './layouts/default-layout/default-layout.
 import { LoginLayoutComponent } from './layouts/login-layout/login-layout.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularMultiSelectModule } from 'angular2-multiselect-dropdown';
+import { MyModalOpenDirective } from './directives/my-modal-open-directive.directive';
+import { FormRemoveParticipation } from './components/form-remove-participation/form-remove-participation.component';
+import { MyModalComponent } from './components/my-modal/my-modal.component';
+import { MyModalService } from './services/my-modal/my-modal.service';
 
 const appRoutes = [
   {
@@ -234,7 +238,10 @@ const appRoutes = [
     PageNotFoundComponent,
     AdminLayoutComponent,
     DefaultLayoutComponent,
-    LoginLayoutComponent
+    LoginLayoutComponent,
+    MyModalOpenDirective,
+    FormRemoveParticipation,
+    MyModalComponent
   ],
   imports: [
     BrowserModule,
@@ -264,7 +271,8 @@ const appRoutes = [
       provide: HTTP_INTERCEPTORS,
       useClass: MyHttpInterceptor,
       multi: true,
-    }
+    },
+    MyModalService
   ],
   bootstrap: [AppComponent]
 })
