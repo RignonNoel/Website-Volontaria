@@ -127,12 +127,8 @@
               button2Style="button--success">
 
   <form [formGroup]="changePasswordForm">
-    <div class="form-group">
-      <label for="old-password" class="form-label">Mot de passe actuel: </label>
-      <input type="password" class="input" formControlName="oldPassword" id="old-password" required autofocus>
-      <div class="form-text form-text--right form-text--danger"
-           *ngIf="changePasswordForm.controls['oldPassword'].hasError('badPassword')">Mot de passe incorrect.</div>
-    </div>
+    <app-my-input name="old-password" title="Mot de passe actuel:" formGroup="changePasswordForm" type="password"></app-my-input>
+
     <div class="form-group">
       <label for="new_password" class="form-label">Nouveau mot de passe: </label>
       <input type="password" formControlName="newPassword" id="new_password" class="input">

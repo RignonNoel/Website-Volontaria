@@ -1,0 +1,18 @@
+<div class="form-group">
+  <label for="{{ name }}" class="form-label">{{ title }}</label>
+  <input type="{{ type }}" formControlName="{{ name }}" id="{{ name }}" class="input">
+  <div *ngIf="formGroup.controls['newPassword'].hasError('apiError')">
+    <div class="form-text form-text--right form-text--info"
+         *ngFor="let errorMessage of formGroup.controls[name].getError('info')">
+      {{ errorMessage }}
+    </div>
+    <div class="form-text form-text--right form-text--danger"
+         *ngFor="let errorMessage of formGroup.controls[name].getError('danger')">
+      {{ errorMessage }}
+    </div>
+    <div class="form-text form-text--right form-text--warning"
+         *ngFor="let errorMessage of formGroup.controls[name].getError('warning')">
+      {{ errorMessage }}
+    </div>
+  </div>
+</div>

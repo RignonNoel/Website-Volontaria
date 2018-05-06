@@ -52,6 +52,7 @@ import { AdminComponent } from './components/pages/admin/admin.component';
 import { MyModalOpenDirective } from './directives/my-modal-open-directive.directive';
 import { MyModalComponent } from './components/my-modal/my-modal.component';
 import { MyModalService } from './services/my-modal/my-modal.service';
+import { MyInputComponent } from './components/my-input/my-input.component';
 
 const appRoutes = [
   {
@@ -251,7 +252,8 @@ const appRoutes = [
     PermissionDirective,
     AdminComponent,
     MyModalOpenDirective,
-    MyModalComponent
+    MyModalComponent,
+    MyInputComponent
   ],
   imports: [
     BrowserModule,
