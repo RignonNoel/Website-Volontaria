@@ -1,11 +1,17 @@
 <div class="page-homepage">
-  <h1 class="page-homepage__title title title--main">
-    Dans quelle ville souhaites-tu faire du bénévolat?
-  </h1>
+  <app-my-table [settings]="settings"
+                [data]="cells"
+                (selectItem)="selectUser($event)"
+                class="page-homepage__list">
+  </app-my-table>
   <div class="page-homepage__content">
-    <app-my-table [settings]="settings"
-                  [data]="cells"
-                  (selectItem)="selectUser($event)">
-    </app-my-table>
+    <h1 class="page-homepage__content__title title title--main">
+      Dans quelle ville souhaites-tu faire du bénévolat?
+    </h1>
+    <div *ngIf="options"
+         leaflet
+         [leafletOptions]="options"
+         class="page-homepage__content__map">
+    </div>
   </div>
 </div>

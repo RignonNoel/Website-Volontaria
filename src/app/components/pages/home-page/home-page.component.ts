@@ -1,9 +1,12 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component, ViewEncapsulation} from '@angular/core';
 import { User } from '../../../models/user';
 import { UserService } from '../../../services/user.service';
 import { CellService } from '../../../services/cell.service';
 import { Cell } from '../../../models/cell';
 import { Router } from '@angular/router';
+
+import * as L from 'leaflet';
+import "../../../../../node_modules/leaflet.tilelayer.colorfilter/src/leaflet-tilelayer-colorfilter.js";
 
 @Component({
   selector: 'app-home',
@@ -21,9 +24,27 @@ export class HomePageComponent {
     columns: [
       {
         name: 'name',
-        title: 'Nom'
+        title: 'Cellule'
       }
     ]
+  };
+
+  map: L.Map;
+
+  defaultToDarkFilter = [
+    'grayscale: 80%'
+  ];
+
+  options = {
+    layers: [
+      (L.tileLayer as any).colorFilter('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 18,
+        attribution: '...' ,
+        filter: this.defaultToDarkFilter
+      }),
+    ],
+    zoom: 10,
+    center: L.latLng(45.5088400, -73.5878100)
   };
 
   constructor(private cellService: CellService,

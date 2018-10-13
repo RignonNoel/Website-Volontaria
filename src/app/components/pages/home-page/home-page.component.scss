@@ -1,16 +1,31 @@
 .page-homepage {
-  padding: 1rem;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  height: 100%;
+  margin: auto;
+  width: 100%;
 
-  &__title {
-    margin: 30px;
+  &__list {
+    width: 300px;
   }
 
   &__content {
-    margin: auto;
-    width: 100%;
-    max-width: 600px;
+    position: relative;
+    flex: 1;
+    justify-content: center;
+
+    &__title {
+      position: absolute;
+      right: 0;
+      z-index: 10;
+      background-color: white;
+      padding: 10px;
+      margin: 30px;
+      border-radius: 5px;
+    }
+
+    &__map {
+      height: 100%;
+      z-index: 1;
+    }
   }
 }

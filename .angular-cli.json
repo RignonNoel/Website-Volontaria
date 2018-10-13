@@ -9,7 +9,12 @@
       "outDir": "dist",
       "assets": [
         "assets",
-        "favicon.ico"
+        "favicon.ico",
+        {
+          "glob": "**/*",
+          "input": "../node_modules/leaflet/dist/images",
+          "output": "./assets/"
+        }
       ],
       "index": "index.html",
       "main": "main.ts",
@@ -21,14 +26,18 @@
       "styles": [
         "styles.scss",
         "../node_modules/font-awesome/scss/font-awesome.scss",
-        "../node_modules/roboto-fontface/css/roboto/roboto-fontface.css"
+        "../node_modules/roboto-fontface/css/roboto/roboto-fontface.css",
+        "../node_modules/leaflet/dist/leaflet.css"
       ],
       "stylePreprocessorOptions": {
         "includePaths": [
           "assets/scss"
         ]
       },
-      "scripts": [],
+      "scripts": [
+        "../node_modules/leaflet/dist//leaflet.js",
+        "../node_modules/leaflet.tilelayer.colorfilter/src/leaflet-tilelayer-colorfilter.min.js"
+      ],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",
