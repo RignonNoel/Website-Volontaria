@@ -6,6 +6,47 @@
 
   &__list {
     width: 300px;
+    height: 100%;
+    overflow-y: auto;
+
+   &__element {
+      display: flex;
+      padding: 10px 10px;
+      padding-bottom: 15px;
+      border-bottom: 1px;
+      border-bottom-style : solid;
+      border-bottom-color: #dedede;
+
+      &__info {
+        flex:1;
+
+        h4{
+          font-size: larger;
+          font-weight: bolder;
+          margin : 0px;  
+        }
+        
+        ul{
+          margin: 0px 0px;
+          padding-left: 0px;
+          font-size: small;
+          color: #9f9f9f;
+
+          li {
+            margin-top: -3px;
+          }
+        }       
+      }
+
+      i{
+        font-size: 40px;
+        margin: auto;
+        padding : 0px 20px;
+        color: #000000b3;
+      }
+    }
+
+
   }
 
   &__content {
