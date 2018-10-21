@@ -47,81 +47,6 @@
         }
       }
 
-      &__details {
-        &__title {
-          margin-top: 10px;
-          font-weight: 900;
-        }
-
-        &__list {
-          overflow: auto;
-
-          &__element {
-            background-color: #F0F0F0;
-            margin: 4px;
-            display: flex;
-            border: 3px solid #F19F3C;
-            border-radius: 10px;
-
-            h3{
-                font-weight: bolder;
-                margin : 0px;  
-            }
-
-            &__time {
-              padding: 4px;
-              display: flex;
-              flex-direction : column;
-              justify-content: space-between;
-              align-items: center;
-              width : 100px;
-              border-right: 3px solid #F19F3C; 
-
-              hr{
-                width: 60%;
-                border: 1px solid black;
-              }
-            }
-
-            &__staff {
-              flex:1;
-              padding: 5px 10px;
-
-
-
-              &__role {
-                display:flex;
-
-                flex-direction : row;
-
-                @media only screen and (max-width: 500px) {
-                  flex-direction : column;
-                }
-
-                h4 {
-                  margin : 0px;
-                }
-                
-
-                &__name {
-                  width : 150px;
-                }
-
-                &__amount {
-                  flex : 1;
-                }
-              }
-            }
-            i {
-              font-size: 50px;
-              margin: auto;
-              padding : 0px 20px;
-              color: #F19F3C;
-            }
-          }
-        }
-      }
-
       &__benevolometre {
         &__title {
           margin-bottom: 10px;
@@ -133,19 +58,73 @@
     &__infos {
       padding: 0 20px;
       flex: 1;
-
-      &__explanation {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-
+      &__details {
         &__title {
-          font-size: 1.5em;
+          margin-top: 10px;
+          font-weight: 900;
         }
 
-        &__icon {
-          height: 70px;
-          transform: scale(-1, 1);
+        &__list {
+          overflow: auto;
+
+          &__element {
+            background-color: $main-background-slight-dark;
+            margin: 4px;
+            display: flex;
+            border: 3px solid $main-color;
+            border-radius: 10px;
+
+            &__time {
+              padding: 4px;
+              display: flex;
+              flex-direction : column;
+              justify-content: space-between;
+              align-items: center;
+              width : 100px;
+              border-right: 3px solid $main-color;
+
+              &__value {
+                font-weight: bolder;
+                margin : 0px;
+              }
+
+              &__hr {
+                width: 60%;
+                border: 1px solid black;
+              }
+            }
+
+            &__staff {
+              flex:1;
+              padding: 5px 10px;
+
+              &__task{
+                font-weight: bolder;
+                margin : 0px;
+              }
+
+              &__role {
+                display:flex;
+                flex-direction : row;                
+
+                &__name {
+                  margin : 0px;
+                  width : 150px;
+                }
+
+                &__amount {
+                  margin : 0px;
+                  flex : 1;
+                }
+              }
+            }
+            &__icon {
+              width : 80px;
+              font-size: 50px;
+              margin: auto;
+              color: $main-color;
+            }
+          }
         }
       }
     }
@@ -176,6 +155,45 @@
       &__explanation {
         display: none;
       }
+    }
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .activities-page__activities__infos__details__list__element {
+  
+    &__time {
+      width : 65px;
+
+      &__value {
+        font-size : 16px;
+      }
+    }
+
+    &__staff {
+      &__task{
+        font-size : 18px;
+      }
+
+      &__role {
+        &__name {
+          font-size: 14px;
+          width : 100px;
+        }
+
+        &__amount {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .activities-page__activities__infos__details__list__element__staff__role {
+    flex-direction : column;
+    &__amount {
+      margin-top: -4px;
     }
   }
 }
