@@ -59,11 +59,11 @@
           }       
         }
 
-        i{
+        &__icon{
           font-size: 40px;
           margin: auto;
           padding : 0px 20px;
-          color: color-icon-dark;
+          color: $color-icon-dark;
         }
       }
     }
@@ -98,7 +98,6 @@
     }
 
     &__content {
-
       &__list{
         width : 100%;
 
@@ -131,7 +130,6 @@
     }
 
     &__content {
-
       &__list{
 
         &__element__info {
