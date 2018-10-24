@@ -68,7 +68,7 @@
           overflow: auto;
 
           &__element {
-            background-color: $main-background-slight-dark;
+            background-color: $main-background-light-dark;
             margin: 4px;
             display: flex;
             border: 3px solid $main-color;
@@ -119,11 +119,16 @@
               }
             }
             &__icon {
-              width : 80px;
               font-size: 50px;
               margin: auto;
+              padding-right: 20px;
               color: $main-color;
             }
+          }
+
+          &__element:hover{
+            background-color: $main-background-dark;
+            transition: 0.3s;
           }
         }
       }
@@ -178,7 +183,7 @@
       &__role {
         &__name {
           font-size: 14px;
-          width : 100px;
+          width : 90px;
         }
 
         &__amount {
@@ -190,11 +195,21 @@
 }
 
 @media only screen and (max-width: 400px) {
-  .activities-page__activities__infos__details__list__element__staff__role {
-    flex-direction : column;
-    &__amount {
-      margin-top: -4px;
+  .activities-page__activities__infos__details__list__element__staff{
+    &__role {
+      flex-direction : column;
+      &__amount {
+        margin-top: -4px;
+      }
     }
+
+    &__name {
+      width : 90px;
+    }
+  }
+
+  .activities-page__activities__infos__details__list__element__icon {
+    font-size: 30px;
   }
 }
 
