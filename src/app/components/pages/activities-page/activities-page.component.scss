@@ -58,6 +58,23 @@
     &__infos {
       padding: 0 20px;
       flex: 1;
+      
+      &__explanation {
+
+        &__title{
+          font-size: 20px;
+        }
+
+        &__icon{
+          width: 70px;
+          -moz-transform: scaleX(-1);
+          -o-transform: scaleX(-1);
+          -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+          margin-top: 15px;
+        }
+      }
+
       &__details {
         &__title {
           margin-top: 10px;
