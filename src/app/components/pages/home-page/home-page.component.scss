@@ -26,7 +26,7 @@
 
     &__list {
       width: 300px;
-      overflow-y: scroll;
+      overflow-y: auto;
 
      &__element {
         display: flex;
@@ -69,6 +69,7 @@
       &__element:hover{
         background-color: $main-background-dark;
         transition: 0.3s;
+        cursor: pointer;
       }
     }
 
