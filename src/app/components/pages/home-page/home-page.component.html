@@ -1,17 +1,35 @@
 <div class="page-homepage">
-  <app-my-table [settings]="settings"
-                [data]="cells"
-                (selectItem)="selectUser($event)"
-                class="page-homepage__list">
-  </app-my-table>
+  <h1 class="page-homepage__title title title--main">
+    Dans quelle ville souhaites-tu faire du bénévolat?
+  </h1>
   <div class="page-homepage__content">
-    <h1 class="page-homepage__content__title title title--main">
-      Dans quelle ville souhaites-tu faire du bénévolat?
-    </h1>
-    <div *ngIf="options"
-         leaflet
-         [leafletOptions]="options"
-         class="page-homepage__content__map">
+  <div class = "page-homepage__content__list">
+    <div class = "page-homepage__content__list__element">
+      <div class = "page-homepage__content__list__element__info">
+        <h4 class = "page-homepage__content__list__element__info__city" >Montreal</h4>
+        <ul class = "page-homepage__content__list__element__info__address">
+          <li class = "page-homepage__content__list__element__info__address__section">420 Eleanor,</li>
+          <li class = "page-homepage__content__list__element__info__address__section">loc. 641,</li>
+          <li class = "page-homepage__content__list__element__info__address__section">H3C 2C2,</li>
+        </ul>
+      </div>
+      <i _ngcontent-c5="" class="fas fa-arrow-circle-right page-homepage__content__list__element__icon"></i>
     </div>
+    <div class = "page-homepage__content__list__element">
+      <div class = "page-homepage__content__list__element__info">
+        <h4 class = "page-homepage__content__list__element__info__city" >Laval</h4>
+        <ul class = "page-homepage__content__list__element__info__address">
+          <li class = "page-homepage__content__list__element__info__address__section">420 Eleanor,</li>
+          <li class = "page-homepage__content__list__element__info__address__section">loc. 641,</li>
+          <li class = "page-homepage__content__list__element__info__address__section">H3C 2C2,</li>
+        </ul>
+      </div>
+      <i _ngcontent-c5="" class="fas fa-arrow-circle-right page-homepage__content__list__element__icon"></i>
+    </div>
+  </div> 
+  <div *ngIf="options"
+       leaflet
+       [leafletOptions]="options"
+       class="page-homepage__content__map">
   </div>
 </div>

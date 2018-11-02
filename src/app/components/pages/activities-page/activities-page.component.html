@@ -60,11 +60,34 @@
         <h2 class="title title--secondary">
           Liste des plages horaires du {{ clickedDay | date:"dd MMMM yyyy"}}:
         </h2>
-        <div class="activities-page__activities__calendar__details__table">
-          <app-my-table [settings]="settings"
-                        [data]="eventsOfDay"
-                        (selectItem)="eventClicked($event)">
-          </app-my-table>
+        <div class="activities-page__activities__infos__details__list">
+          <div class ="activities-page__activities__infos__details__list__element">
+            <div class ="activities-page__activities__infos__details__list__element__time">
+               <h3 class ="activities-page__activities__infos__details__list__element__time__value">12:15</h3>
+               <hr class ="activities-page__activities__infos__details__list__element__time__hr">
+               <h3 class ="activities-page__activities__infos__details__list__element__time__value">16:00</h3>
+            </div>
+            <div class ="activities-page__activities__infos__details__list__element__staff">
+              <h3 class ="activities-page__activities__infos__details__list__element__staff__task">Emballage</h3>
+              <div class ="activities-page__activities__infos__details__list__element__staff__role">
+                <h4 class ="activities-page__activities__infos__details__list__element__staff__role__name">
+                  Bénévoles
+                </h4>
+                <h4 class ="activities-page__activities__infos__details__list__element__staff__role__amount">
+                  8 / 12
+                </h4>
+              </div>
+              <div class ="activities-page__activities__infos__details__list__element__staff__role">
+                <h4 class ="activities-page__activities__infos__details__list__element__staff__role__name">
+                    Remplaçants
+                  </h4>
+                  <h4 class ="activities-page__activities__infos__details__list__element__staff__role__amount">
+                    0 / 5
+                  </h4>
+                </div>
+            </div>
+            <i _ngcontent-c5="" class="fas fa-arrow-circle-right activities-page__activities__infos__details__list__element__icon"></i>
+          </div>
         </div>
       </div>
       <div *ngIf="!clickedDay" class="activities-page__activities__infos__explanation">
