@@ -1,0 +1,34 @@
+@import '../../../../assets/scss/theme';
+
+.schedule-section {
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__preview {
+      color: $instance-color;
+      font-size: 30px;
+      margin-right: 50px;
+    }
+
+    &__items {
+      display: flex;
+
+      &__item {
+        display: block;
+        margin: 20px;
+      }
+    }
+
+    &__next {
+      color: $instance-color;
+      font-size: 30px;
+      margin-left: 50px;
+    }
+  }
+}

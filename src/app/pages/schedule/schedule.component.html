@@ -1,0 +1,12 @@
+<div class="schedule">
+  <app-schedule-section class="schedule__section"
+                        title="Activité à venir"
+                        [participations]="participationsFuture"
+                        [canDelete]="true"
+                        (onDeletion)="getParticipationsFuture()"></app-schedule-section>
+  <app-schedule-section class="schedule__section"
+                        title="Activités déjà effectuées"
+                        [participations]="participationsPast"
+                        [canDelete]="false"
+                        (onDeletion)="getParticipationsPast()"></app-schedule-section>
+</div>
